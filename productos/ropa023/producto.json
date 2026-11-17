@@ -1,0 +1,12 @@
+{
+  "id": "ropa023",
+  "fotos_originales": "fotos originales/",
+  "imagenes_asociadas": [
+    "ropa023"
+  ],
+  "nombre": "Camisa azul",
+  "precio_ars": 15000,
+  "categoria": "Ropa",
+  "descripcion": "Camisa azul de manga larga Devré.",
+  "notas": "Marca: Devré.\nTalla: 37/38."
+}

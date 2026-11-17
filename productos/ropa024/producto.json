@@ -1,0 +1,12 @@
+{
+  "id": "ropa024",
+  "fotos_originales": "fotos originales/",
+  "imagenes_asociadas": [
+    "ropa024"
+  ],
+  "nombre": "Camisa gris rayada",
+  "precio_ars": 35000,
+  "categoria": "Ropa",
+  "descripcion": "Camisa gris BOIL rayada de manga corta.",
+  "notas": "Marca: BOIL.\nTalla: L."
+}

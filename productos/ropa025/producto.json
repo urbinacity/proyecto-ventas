@@ -1,0 +1,12 @@
+{
+  "id": "ropa025",
+  "fotos_originales": "fotos originales/",
+  "imagenes_asociadas": [
+    "ropa025"
+  ],
+  "nombre": "Sweater azul oscuro",
+  "precio_ars": 60000,
+  "categoria": "Ropa",
+  "descripcion": "Sweater UNIQLO azul oscuro de cuello alto.",
+  "notas": "Marca: UNIQLO.\nTalla: M."
+}

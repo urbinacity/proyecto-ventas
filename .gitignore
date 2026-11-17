@@ -1,0 +1,9 @@
+node_modules/
+.pnpm-store/
+dist/
+.DS_Store
+catalogo/originales/*
+!catalogo/originales/.gitkeep
+productos/*/fotos originales/
+public/productos/*
+public/productos/*/*

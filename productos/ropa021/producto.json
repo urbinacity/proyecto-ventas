@@ -1,0 +1,12 @@
+{
+  "id": "ropa021",
+  "fotos_originales": "fotos originales/",
+  "imagenes_asociadas": [
+    "ropa021"
+  ],
+  "nombre": "Sweater Gap",
+  "precio_ars": 50000,
+  "categoria": "Ropa",
+  "descripcion": "Sweater beige con etiqueta Gap.",
+  "notas": "Marca: GAP.\nTalla: M."
+}

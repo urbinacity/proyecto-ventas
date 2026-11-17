@@ -1,0 +1,12 @@
+{
+  "id": "ropa020",
+  "fotos_originales": "fotos originales/",
+  "imagenes_asociadas": [
+    "ropa020"
+  ],
+  "nombre": "Camisa rayada",
+  "precio_ars": 12000,
+  "categoria": "Ropa",
+  "descripcion": "Camisa de manga larga con rayas en tonos azul y blanco.",
+  "notas": "Marca: ZARA.\nTalla: M/40."
+}
