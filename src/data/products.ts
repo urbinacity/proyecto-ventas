@@ -18,7 +18,7 @@ export const products: Product[] = [
     "id": "electronica023",
     "name": "CPU gamer",
     "category": "Electrónica",
-    "price": 700000,
+    "price": 730000,
     "condition": "Usado",
     "description": "Computadora de escritorio gamer con fotos y capturas de diagnóstico.",
     "details": [
@@ -51,9 +51,7 @@ export const products: Product[] = [
       "/productos/electronica023/14-detail.webp",
       "/productos/electronica023/15-detail.webp",
       "/productos/electronica023/16-detail.webp",
-      "/productos/electronica023/17-detail.webp",
-      "/productos/electronica023/18-detail.webp",
-      "/productos/electronica023/19-detail.webp"
+      "/productos/electronica023/17-detail.webp"
     ]
   },
   {
@@ -254,7 +252,7 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "ropa047-zapato",
+    "id": "ropa09-zapato",
     "name": "Zapato ZARA",
     "category": "Zapatos",
     "price": 55000,
@@ -264,13 +262,13 @@ export const products: Product[] = [
       "Zapatos de cuero. Talla 43 marca Zara para hombres color negro."
     ],
     "available": true,
-    "cardImage": "/productos/ropa047-zapato/01-card.webp",
+    "cardImage": "/productos/ropa09-zapato/01-card.webp",
     "images": [
-      "/productos/ropa047-zapato/01-detail.webp",
-      "/productos/ropa047-zapato/02-detail.webp",
-      "/productos/ropa047-zapato/03-detail.webp",
-      "/productos/ropa047-zapato/04-detail.webp",
-      "/productos/ropa047-zapato/05-detail.webp"
+      "/productos/ropa09-zapato/01-detail.webp",
+      "/productos/ropa09-zapato/02-detail.webp",
+      "/productos/ropa09-zapato/03-detail.webp",
+      "/productos/ropa09-zapato/04-detail.webp",
+      "/productos/ropa09-zapato/05-detail.webp"
     ]
   }
 ]
