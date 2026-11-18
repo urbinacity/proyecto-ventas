@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Product } from './data/products'
 import { products } from './data/products'
 
-const WHATSAPP_NUMBER = '44735259072'
+const WHATSAPP_NUMBER = '+447352590726'
 const WHATSAPP_USERNAME = 'victor706'
 const money = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 })
 

@@ -1,0 +1,12 @@
+{
+  "id": "mouse2",
+  "fotos_originales": "fotos originales/",
+  "imagenes_asociadas": [
+    "mouse2"
+  ],
+  "nombre": "Mouse Gamer",
+  "precio_ars": 70000,
+  "categoria": "Electrónica",
+  "descripcion": "Mouse Gamer Glorious Model O Minus Matte Black",
+  "notas": null
+}
