@@ -5,5 +5,3 @@ dist/
 catalogo/originales/*
 !catalogo/originales/.gitkeep
 productos/*/fotos originales/
-public/productos/*
-public/productos/*/*
