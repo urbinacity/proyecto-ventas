@@ -28,6 +28,11 @@ function buildWhatsAppUrl(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
+function pickHeroProducts() {
+  const amount = 2
+  return [...products].sort(() => Math.random() - 0.5).slice(0, amount)
+}
+
 function ProductCard({ product, onOpen, onAdd }: { product: Product; onOpen: () => void; onAdd: () => void }) {
   return (
     <article className="product-card" onClick={onOpen}>
@@ -152,6 +157,7 @@ function App() {
   const [cart, setCart] = useState<Cart>({})
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [cartOpen, setCartOpen] = useState(false)
+  const [heroProducts] = useState<Product[]>(pickHeroProducts)
   const categories = ['Todos', ...new Set(products.map((product) => product.category))]
   const visibleProducts = useMemo(() => products.filter((product) => {
     const matchesCategory = category === 'Todos' || product.category === category
@@ -168,7 +174,7 @@ function App() {
     <div className="site-shell">
       <header className="topbar"><a className="brand" href="#inicio"><span className="brand-mark">GS</span><span><strong>Garage Sale</strong><small>CABA · cosas con otra historia</small></span></a><nav><a href="#catalogo">Catálogo</a><a href="#como-funciona">Cómo funciona</a></nav><button className="cart-button" onClick={() => setCartOpen(true)}><Icon name="bag" /><span>Carrito</span>{cartCount > 0 && <b>{cartCount}</b>}</button></header>
       <main id="inicio">
-        <section className="hero"><div className="hero-copy"><p className="kicker">OBJETOS ELEGIDOS · CABA</p><h1>Cosas con otra historia, <em>listas para la próxima.</em></h1><p className="hero-lede">Una selección de muebles, deco y objetos usados que todavía tienen mucho para dar. Mirá, elegí y escribime por WhatsApp.</p><a className="primary-button" href="#catalogo">Ver productos <Icon name="arrow" /></a></div><div className="hero-art"><div className="tape">segunda<br />oportunidad</div><div className="art-card art-card-back">✦</div><div className="art-card art-card-front"><span>encontrado<br />para vos</span><strong>↗</strong></div><div className="hero-stamp">reusar<br />es elegir<br />distinto</div></div></section>
+        <section className="hero"><div className="hero-copy"><p className="kicker">OBJETOS ELEGIDOS · CABA</p><h1>Cosas con otra historia, <em>listas para la próxima.</em></h1><p className="hero-lede">Una selección de muebles, deco y objetos usados que todavía tienen mucho para dar. Mirá, elegí y escribime por WhatsApp.</p><a className="primary-button" href="#catalogo">Ver productos <Icon name="arrow" /></a></div><div className="hero-art">{heroProducts.map((product, index) => <button className={`hero-product-photo hero-product-photo-${index}`} key={product.id} onClick={() => setSelectedProduct(product)} aria-label={`Ver ${product.name}`}><img src={product.cardImage} alt={product.name} /><span>{product.name}</span></button>)}<div className="tape">segunda<br />oportunidad</div><div className="art-card art-card-back">✦</div><div className="art-card art-card-front"><span>encontrado<br />para vos</span><strong>↗</strong></div><div className="hero-stamp">reusar<br />es elegir<br />distinto</div></div></section>
         <section className="trust-strip"><div><strong>Retiro en CABA</strong><span>Coordinamos por WhatsApp</span></div><div><strong>Envíos a consultar</strong><span>Vemos la mejor opción para vos</span></div><div><strong>Sin vueltas</strong><span>Preguntá por cualquier detalle</span></div></section>
         <section className="catalog-section" id="catalogo"><div className="section-heading"><div><p className="kicker">LA SELECCIÓN ACTUAL</p><h2>Encontrá tu próximo hallazgo.</h2></div><span className="product-count">{visibleProducts.length} productos</span></div><div className="catalog-toolbar"><div className="search-box"><Icon name="search" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar por nombre o categoría" aria-label="Buscar productos" /></div><div className="category-list">{categories.map((item) => <button className={category === item ? 'category-chip active' : 'category-chip'} onClick={() => setCategory(item)} key={item}>{item}</button>)}</div></div>{visibleProducts.length > 0 ? <div className="product-grid">{visibleProducts.map((product) => <ProductCard key={product.id} product={product} onOpen={() => setSelectedProduct(product)} onAdd={() => addToCart(product.id)} />)}</div> : <div className="no-results"><h3>No encontramos ese hallazgo.</h3><p>Probá con otro nombre o categoría.</p></div>}</section>
         <section className="how-section" id="como-funciona"><div><p className="kicker">ASÍ DE SIMPLE</p><h2>Elegís. Consultás. Coordinamos.</h2></div><div className="steps"><div><span>01</span><strong>Mirás con calma</strong><p>Abrí cualquier producto para ver más fotos y detalles.</p></div><div><span>02</span><strong>Armás tu selección</strong><p>Sumá al carrito todo lo que te interese.</p></div><div><span>03</span><strong>Me escribís</strong><p>El botón abre WhatsApp con tu consulta lista.</p></div></div></section>

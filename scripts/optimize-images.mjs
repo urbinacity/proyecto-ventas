@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
+import { access, mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { extname, join } from 'node:path'
 import sharp from 'sharp'
 
@@ -50,8 +50,19 @@ for (const folder of productEntries) {
     const source = join(imageDir, image.name)
     const baseName = `${String(index + 1).padStart(2, '0')}`
     const cardPath = `/productos/${folder.name}/${baseName}-card.webp`
-    await sharp(source).rotate().resize({ width: 640, height: 640, fit: 'inside', withoutEnlargement: true }).webp({ quality: 82 }).toFile(join(productOutputDir, `${baseName}-card.webp`))
-    await sharp(source).rotate().resize({ width: 1600, height: 1600, fit: 'inside', withoutEnlargement: true }).webp({ quality: 84 }).toFile(join(productOutputDir, `${baseName}-detail.webp`))
+    const cardOutput = join(productOutputDir, `${baseName}-card.webp`)
+    const detailOutput = join(productOutputDir, `${baseName}-detail.webp`)
+    const outputsExist = await Promise.all([cardOutput, detailOutput].map(async (output) => {
+      try { await access(output); return true } catch { return false }
+    }))
+
+    if (outputsExist.every(Boolean)) {
+      console.log(`↷ ${folder.name}/${image.name}: ya optimizada`)
+    } else {
+      await sharp(source).rotate().resize({ width: 640, height: 640, fit: 'inside', withoutEnlargement: true }).webp({ quality: 82 }).toFile(cardOutput)
+      await sharp(source).rotate().resize({ width: 1600, height: 1600, fit: 'inside', withoutEnlargement: true }).webp({ quality: 84 }).toFile(detailOutput)
+      console.log(`✓ ${folder.name}/${image.name}: optimizada`)
+    }
     if (index === 0) cardImage = cardPath
     imagePaths.push(`/productos/${folder.name}/${baseName}-detail.webp`)
     optimizedCount += 1

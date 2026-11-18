@@ -17,7 +17,7 @@ pnpm dev
 4. El script actualizará `src/data/products.ts` y generará las imágenes WebP en `public/productos/`.
 5. Marcá `"disponible": false` en el JSON si más adelante querés agregar esa propiedad; por defecto los productos se cargan disponibles.
 
-El optimizador recorre todos los productos y genera dos versiones WebP por imagen: una liviana para tarjetas y otra más grande para el detalle. Los originales quedan fuera del deploy mediante `.gitignore`.
+El optimizador recorre todos los productos y genera dos versiones WebP por imagen: una liviana para tarjetas y otra más grande para el detalle. Si ambas versiones ya existen, las saltea para no reprocesarlas. Los originales quedan fuera del deploy mediante `.gitignore`.
 
 ## Build
 

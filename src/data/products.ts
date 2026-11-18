@@ -15,24 +15,51 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    "id": "electronica039",
-    "name": "Cables",
-    "category": "Electrónica",
-    "price": 5000,
+    "id": "electronica023",
+    "name": "CPU gamer",
+    "category": "Electronica",
+    "price": 700000,
     "condition": "Usado",
-    "description": "Cable Hdmi Mallado Oro 1080p 4k Doble Filtro 3 Metros",
-    "details": [],
+    "description": "Computadora de escritorio gamer con fotos y capturas de diagnostico.",
+    "details": [
+      "Memoria RAM: 16 GB DDR4 3000 MHz (Corsair Vengeance)",
+      "Almacenamiento: 1TB SSD HP.",
+      "Almacenamiento: 500 GB HDD Toshiba",
+      "GPU: AMD Radeon RX 570 8 GB",
+      "Procesador: Intel Core i7-8700 (6 núcleos, 3.2 GHz, 8va generacion)",
+      "Placa madre: Gigabyte Z370 HD3 (socket 1151)",
+      "Fuente de poder: Sentey 750W 80+ Bronze (modular, MBP750-MH)",
+      "Gabinete: Sentey GS-6350.",
+      "Sistema preinstalado: Bazzite 25 ideal para Fornite."
+    ],
     "available": true,
-    "cardImage": "/productos/electronica039/01-card.webp",
+    "cardImage": "/productos/electronica023/01-card.webp",
     "images": [
-      "/productos/electronica039/01-detail.webp",
-      "/productos/electronica039/02-detail.webp"
+      "/productos/electronica023/01-detail.webp",
+      "/productos/electronica023/16-detail.webp",
+      "/productos/electronica023/17-detail.webp",
+      "/productos/electronica023/18-detail.webp",
+      "/productos/electronica023/19-detail.webp",
+      "/productos/electronica023/13-detail.webp",
+      "/productos/electronica023/10-detail.webp",
+      "/productos/electronica023/11-detail.webp",
+      "/productos/electronica023/12-detail.webp",
+      "/productos/electronica023/02-detail.webp",
+      "/productos/electronica023/04-detail.webp",
+      "/productos/electronica023/03-detail.webp",
+      "/productos/electronica023/06-detail.webp",
+      "/productos/electronica023/05-detail.webp",
+      "/productos/electronica023/07-detail.webp",
+      "/productos/electronica023/08-detail.webp",
+      "/productos/electronica023/09-detail.webp",
+      "/productos/electronica023/14-detail.webp",
+      "/productos/electronica023/15-detail.webp",
     ]
   },
   {
     "id": "electronica041",
     "name": "Disco externo Seagate Expansion 4TB",
-    "category": "Electrónica",
+    "category": "Electronica",
     "price": 140000,
     "condition": "Usado",
     "description": "Disco rígido externo Seagate Expansion de 4 TB.",
@@ -45,16 +72,17 @@ export const products: Product[] = [
       "/productos/electronica041/01-detail.webp",
       "/productos/electronica041/02-detail.webp",
       "/productos/electronica041/03-detail.webp",
-      "/productos/electronica041/04-detail.webp"
+      "/productos/electronica041/04-detail.webp",
+      "/productos/electronica041/05-detail.webp"
     ]
   },
   {
     "id": "electronica042",
     "name": "Webcam Redragon Hitman GW800",
-    "category": "Electrónica",
+    "category": "Electronica",
     "price": 40000,
     "condition": "Usado",
-    "description": "Webcam Redragon Hitman GW800 con resolución Full HD 1080p.",
+    "description": "Webcam Redragon Hitman GW800 con resolucion Full HD 1080p.",
     "details": [
       "Se uso apenas 1 o 2 veces."
     ],
@@ -69,42 +97,17 @@ export const products: Product[] = [
   },
   {
     "id": "electronica043",
-    "name": "CPU gamer",
-    "category": "Electrónica",
-    "price": 700000,
+    "name": "Cables",
+    "category": "Electronica",
+    "price": 5000,
     "condition": "Usado",
-    "description": "Computadora de escritorio gamer con fotos y capturas de diagnóstico.",
-    "details": [
-      "Memoria RAM: 16 GB DDR4 3000 MHz (Corsair Vengeance)",
-      "Almacenamiento: SSD 1TB HP, 500 GB HDD Toshiba",
-      "GPU: AMD Radeon RX 570 8 GB",
-      "Procesador: Intel Core i7-8700 (6 núcleos, 3.2 GHz, 8va generación)",
-      "Placa madre: Gigabyte Z370 HD3 (socket 1151)",
-      "Fuente de poder: Sentey 750W 80+ Bronze (modular, MBP750-MH)",
-      "Gabinete: Sentey GS-6350."
-    ],
+    "description": "Cable Hdmi Mallado Oro 1080p 4k Doble Filtro 3 Metros",
+    "details": [],
     "available": true,
     "cardImage": "/productos/electronica043/01-card.webp",
     "images": [
       "/productos/electronica043/01-detail.webp",
-      "/productos/electronica043/02-detail.webp",
-      "/productos/electronica043/03-detail.webp",
-      "/productos/electronica043/04-detail.webp",
-      "/productos/electronica043/05-detail.webp",
-      "/productos/electronica043/06-detail.webp",
-      "/productos/electronica043/07-detail.webp",
-      "/productos/electronica043/08-detail.webp",
-      "/productos/electronica043/09-detail.webp",
-      "/productos/electronica043/10-detail.webp",
-      "/productos/electronica043/11-detail.webp",
-      "/productos/electronica043/12-detail.webp",
-      "/productos/electronica043/13-detail.webp",
-      "/productos/electronica043/14-detail.webp",
-      "/productos/electronica043/15-detail.webp",
-      "/productos/electronica043/16-detail.webp",
-      "/productos/electronica043/17-detail.webp",
-      "/productos/electronica043/18-detail.webp",
-      "/productos/electronica043/19-detail.webp"
+      "/productos/electronica043/02-detail.webp"
     ]
   },
   {
@@ -312,7 +315,7 @@ export const products: Product[] = [
     "id": "ropa025",
     "name": "Sweater azul oscuro",
     "category": "Ropa",
-    "price": 60000,
+    "price": 50000,
     "condition": "Usado",
     "description": "Sweater UNIQLO azul oscuro de cuello alto.",
     "details": [
@@ -353,29 +356,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "ropa027",
-    "name": "Pantalón gris",
-    "category": "Ropa",
-    "price": 8000,
-    "condition": "Usado",
-    "description": "Pantalón holgado negro.",
-    "details": [
-      "Marca: ModernBoy.",
-      "Talla: M."
-    ],
-    "available": true,
-    "cardImage": "/productos/ropa027/01-card.webp",
-    "images": [
-      "/productos/ropa027/01-detail.webp",
-      "/productos/ropa027/02-detail.webp",
-      "/productos/ropa027/03-detail.webp",
-      "/productos/ropa027/04-detail.webp",
-      "/productos/ropa027/05-detail.webp",
-      "/productos/ropa027/06-detail.webp",
-      "/productos/ropa027/07-detail.webp"
-    ]
-  },
-  {
     "id": "ropa028",
     "name": "Campera beige estampada",
     "category": "Ropa",
@@ -401,7 +381,7 @@ export const products: Product[] = [
     "id": "ropa029",
     "name": "Sweater beige",
     "category": "Ropa",
-    "price": 40000,
+    "price": 50000,
     "condition": "Usado",
     "description": "Sweater beige de punto. Chaqueta polar con cremallera completa",
     "details": [
@@ -500,26 +480,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "ropa034",
-    "name": "Pantalon de vestir",
-    "category": "Ropa",
-    "price": 8000,
-    "condition": "Usado",
-    "description": "Pantalon de vestir Polo verde.",
-    "details": [
-      "Marca: Simonaci Polo Life.",
-      "Talla: 40."
-    ],
-    "available": true,
-    "cardImage": "/productos/ropa034/01-card.webp",
-    "images": [
-      "/productos/ropa034/01-detail.webp",
-      "/productos/ropa034/02-detail.webp",
-      "/productos/ropa034/03-detail.webp",
-      "/productos/ropa034/04-detail.webp"
-    ]
-  },
-  {
     "id": "ropa035",
     "name": "Sweater gris azulado",
     "category": "Ropa",
@@ -539,12 +499,32 @@ export const products: Product[] = [
     ]
   },
   {
+    "id": "ropa047-zapato",
+    "name": "Zapato ZARA",
+    "category": "Zapatos",
+    "price": 55000,
+    "condition": "Usado",
+    "description": "Zapato Formal Zara Talla 43 Negro",
+    "details": [
+      "Zapatos de cuero. Talla 43 marca Zara para hombres color negro."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa047-zapato/01-card.webp",
+    "images": [
+      "/productos/ropa047-zapato/01-detail.webp",
+      "/productos/ropa047-zapato/02-detail.webp",
+      "/productos/ropa047-zapato/03-detail.webp",
+      "/productos/ropa047-zapato/04-detail.webp",
+      "/productos/ropa047-zapato/05-detail.webp"
+    ]
+  },
+  {
     "id": "ropa036",
-    "name": "Pantalón gris oscuro",
+    "name": "Pantalon gris oscuro",
     "category": "Ropa",
     "price": 20000,
     "condition": "Usado",
-    "description": "Pantalón de vestir mujer gris oscuro.",
+    "description": "Pantalon de vestir mujer gris oscuro.",
     "details": [
       "Talla: S."
     ],
@@ -554,6 +534,49 @@ export const products: Product[] = [
       "/productos/ropa036/01-detail.webp",
       "/productos/ropa036/02-detail.webp",
       "/productos/ropa036/03-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa027",
+    "name": "Pantalon gris",
+    "category": "Ropa",
+    "price": 8000,
+    "condition": "Usado",
+    "description": "Pantalon holgado negro.",
+    "details": [
+      "Marca: ModernBoy.",
+      "Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa027/01-card.webp",
+    "images": [
+      "/productos/ropa027/01-detail.webp",
+      "/productos/ropa027/02-detail.webp",
+      "/productos/ropa027/03-detail.webp",
+      "/productos/ropa027/04-detail.webp",
+      "/productos/ropa027/05-detail.webp",
+      "/productos/ropa027/06-detail.webp",
+      "/productos/ropa027/07-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa034",
+    "name": "Pantalon de vestir",
+    "category": "Ropa",
+    "price": 8000,
+    "condition": "Usado",
+    "description": "Pantalon de vestir Polo verde.",
+    "details": [
+      "Marca: Simonaci Polo Life.",
+      "Talla: 40."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa034/01-card.webp",
+    "images": [
+      "/productos/ropa034/01-detail.webp",
+      "/productos/ropa034/02-detail.webp",
+      "/productos/ropa034/03-detail.webp",
+      "/productos/ropa034/04-detail.webp"
     ]
   }
 ]
