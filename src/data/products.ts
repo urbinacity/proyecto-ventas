@@ -16,11 +16,11 @@ export type Product = {
 export const products: Product[] = [
   {
     "id": "electronica023",
-    "name": "CPU gamer",
+    "name": "CPU gamer Intel",
     "category": "Electrónica",
     "price": 730000,
     "condition": "Usado",
-    "description": "Computadora de escritorio gamer con fotos y capturas de diagnóstico.",
+    "description": "Computadora de escritorio gamer 2 años de uso.",
     "details": [
       "Memoria RAM: 16 GB DDR4 3000 MHz (Corsair Vengeance)",
       "Almacenamiento: 1TB SSD HP.",
@@ -39,10 +39,8 @@ export const products: Product[] = [
       "/productos/electronica023/02-detail.webp",
       "/productos/electronica023/03-detail.webp",
       "/productos/electronica023/04-detail.webp",
-      "/productos/electronica023/05-detail.webp",
       "/productos/electronica023/06-detail.webp",
       "/productos/electronica023/07-detail.webp",
-      "/productos/electronica023/08-detail.webp",
       "/productos/electronica023/09-detail.webp",
       "/productos/electronica023/10-detail.webp",
       "/productos/electronica023/11-detail.webp",
@@ -51,7 +49,11 @@ export const products: Product[] = [
       "/productos/electronica023/14-detail.webp",
       "/productos/electronica023/15-detail.webp",
       "/productos/electronica023/16-detail.webp",
-      "/productos/electronica023/17-detail.webp"
+      "/productos/electronica023/17-detail.webp",
+      "/productos/electronica023/18-detail.webp",
+      "/productos/electronica023/19-detail.webp",
+      "/productos/electronica023/20-detail.webp",
+      "/productos/electronica023/21-detail.webp"
     ]
   },
   {
@@ -71,7 +73,9 @@ export const products: Product[] = [
       "/productos/electronica041/02-detail.webp",
       "/productos/electronica041/03-detail.webp",
       "/productos/electronica041/04-detail.webp",
-      "/productos/electronica041/05-detail.webp"
+      "/productos/electronica041/05-detail.webp",
+      "/productos/electronica041/06-detail.webp",
+      "/productos/electronica041/07-detail.webp"
     ]
   },
   {
@@ -146,6 +150,22 @@ export const products: Product[] = [
       "/productos/electronica051-teclado2/02-detail.webp",
       "/productos/electronica051-teclado2/03-detail.webp",
       "/productos/electronica051-teclado2/04-detail.webp"
+    ]
+  },
+  {
+    "id": "electronica053-displayport",
+    "name": "Adaptador DisplayPort a HDMI",
+    "category": "Electrónica",
+    "price": 10000,
+    "condition": "Nuevo",
+    "description": "Adaptador DisplayPort a HDMI",
+    "details": [],
+    "available": true,
+    "cardImage": "/productos/electronica053-displayport/01-card.webp",
+    "images": [
+      "/productos/electronica053-displayport/01-detail.webp",
+      "/productos/electronica053-displayport/02-detail.webp",
+      "/productos/electronica053-displayport/03-detail.webp"
     ]
   },
   {
@@ -243,12 +263,434 @@ export const products: Product[] = [
     "condition": "Caja abierta",
     "description": "Earplug Phonak Serenity Choice Music",
     "details": [
-      "Se abrió la caja para probarlo, funcionan muy bien. Ideal festivales, conciertos."
+      "Se abrió la caja para probarlo, funcionan bien. Ideal festivales, conciertos."
     ],
     "available": true,
     "cardImage": "/productos/phonak_serenity_protector_auditivo/01-card.webp",
     "images": [
       "/productos/phonak_serenity_protector_auditivo/01-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa010",
+    "name": "Camisa azul a cuadros",
+    "category": "Ropa",
+    "price": 20000,
+    "condition": "Usado",
+    "description": "Camisa azul a cuadros Furest.",
+    "details": [
+      "Marca: Furest.",
+      "Talla: 35/38."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa010/01-card.webp",
+    "images": [
+      "/productos/ropa010/01-detail.webp",
+      "/productos/ropa010/02-detail.webp",
+      "/productos/ropa010/03-detail.webp",
+      "/productos/ropa010/04-detail.webp",
+      "/productos/ropa010/05-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa011",
+    "name": "Musculosa transparente",
+    "category": "Ropa",
+    "price": 30000,
+    "condition": "Usado",
+    "description": "Musculosa transparente BOIL.",
+    "details": [
+      "Marca: BOIL. Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa011/01-card.webp",
+    "images": [
+      "/productos/ropa011/01-detail.webp",
+      "/productos/ropa011/02-detail.webp",
+      "/productos/ropa011/03-detail.webp",
+      "/productos/ropa011/04-detail.webp",
+      "/productos/ropa011/05-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa012",
+    "name": "Sweater con rayas gris",
+    "category": "Ropa",
+    "price": 14000,
+    "condition": "Usado",
+    "description": "Sweater Quiksilver rayas gris.",
+    "details": [
+      "Marca: Quiksilver Originals.",
+      "Talla: S."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa012/01-card.webp",
+    "images": [
+      "/productos/ropa012/01-detail.webp",
+      "/productos/ropa012/02-detail.webp",
+      "/productos/ropa012/03-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa019",
+    "name": "Short negro",
+    "category": "Ropa",
+    "price": 50000,
+    "condition": "Usado",
+    "description": "Bermuda BOIL negro de material cuero.",
+    "details": [],
+    "available": true,
+    "cardImage": "/productos/ropa019/01-card.webp",
+    "images": [
+      "/productos/ropa019/01-detail.webp",
+      "/productos/ropa019/02-detail.webp",
+      "/productos/ropa019/03-detail.webp",
+      "/productos/ropa019/04-detail.webp",
+      "/productos/ropa019/05-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa020",
+    "name": "Camisa rayada",
+    "category": "Ropa",
+    "price": 12000,
+    "condition": "Usado",
+    "description": "Camisa de manga larga con rayas en tonos azul y blanco.",
+    "details": [
+      "Marca: ZARA.",
+      "Talla: M/40."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa020/01-card.webp",
+    "images": [
+      "/productos/ropa020/01-detail.webp",
+      "/productos/ropa020/02-detail.webp",
+      "/productos/ropa020/03-detail.webp",
+      "/productos/ropa020/04-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa021",
+    "name": "Sweater Gap",
+    "category": "Ropa",
+    "price": 50000,
+    "condition": "Usado",
+    "description": "Sweater beige con etiqueta Gap.",
+    "details": [
+      "Marca: GAP.",
+      "Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa021/01-card.webp",
+    "images": [
+      "/productos/ropa021/01-detail.webp",
+      "/productos/ropa021/02-detail.webp",
+      "/productos/ropa021/03-detail.webp",
+      "/productos/ropa021/04-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa022",
+    "name": "Camisa azul lisa",
+    "category": "Ropa",
+    "price": 12000,
+    "condition": "Usado",
+    "description": "Camisa azul lisa Edmonds.",
+    "details": [
+      "Marca: Edmonds.",
+      "Talla: 37/38."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa022/01-card.webp",
+    "images": [
+      "/productos/ropa022/01-detail.webp",
+      "/productos/ropa022/02-detail.webp",
+      "/productos/ropa022/03-detail.webp",
+      "/productos/ropa022/04-detail.webp",
+      "/productos/ropa022/05-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa023",
+    "name": "Camisa azul Devré",
+    "category": "Ropa",
+    "price": 15000,
+    "condition": "Usado",
+    "description": "Camisa azul de manga larga Devré.",
+    "details": [
+      "Marca: Devré.",
+      "Talla: 37/38."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa023/01-card.webp",
+    "images": [
+      "/productos/ropa023/01-detail.webp",
+      "/productos/ropa023/02-detail.webp",
+      "/productos/ropa023/03-detail.webp",
+      "/productos/ropa023/04-detail.webp",
+      "/productos/ropa023/05-detail.webp",
+      "/productos/ropa023/06-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa024",
+    "name": "Camisa gris rayada",
+    "category": "Ropa",
+    "price": 35000,
+    "condition": "Usado",
+    "description": "Camisa gris BOIL rayada de manga corta.",
+    "details": [
+      "Marca: BOIL.",
+      "Talla: L."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa024/01-card.webp",
+    "images": [
+      "/productos/ropa024/01-detail.webp",
+      "/productos/ropa024/02-detail.webp",
+      "/productos/ropa024/03-detail.webp",
+      "/productos/ropa024/04-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa025",
+    "name": "Sweater azul oscuro",
+    "category": "Ropa",
+    "price": 50000,
+    "condition": "Usado",
+    "description": "Sweater UNIQLO azul oscuro de cuello alto.",
+    "details": [
+      "Marca: UNIQLO.",
+      "Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa025/01-card.webp",
+    "images": [
+      "/productos/ropa025/01-detail.webp",
+      "/productos/ropa025/02-detail.webp",
+      "/productos/ropa025/03-detail.webp",
+      "/productos/ropa025/04-detail.webp",
+      "/productos/ropa025/05-detail.webp",
+      "/productos/ropa025/06-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa026",
+    "name": "Camisa azul a cuadros",
+    "category": "Ropa",
+    "price": 8000,
+    "condition": "Usado",
+    "description": "Camisa H&M azul a cuadros.",
+    "details": [
+      "Marca: H&M.",
+      "Talla: S."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa026/01-card.webp",
+    "images": [
+      "/productos/ropa026/01-detail.webp",
+      "/productos/ropa026/02-detail.webp",
+      "/productos/ropa026/03-detail.webp",
+      "/productos/ropa026/04-detail.webp",
+      "/productos/ropa026/05-detail.webp",
+      "/productos/ropa026/06-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa028",
+    "name": "Campera beige",
+    "category": "Ropa",
+    "price": 70000,
+    "condition": "Usado",
+    "description": "Campera ZARA beige con cuello.",
+    "details": [
+      "Marca: ZARA.",
+      "Talla: L/42."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa028/01-card.webp",
+    "images": [
+      "/productos/ropa028/01-detail.webp",
+      "/productos/ropa028/02-detail.webp",
+      "/productos/ropa028/03-detail.webp",
+      "/productos/ropa028/04-detail.webp",
+      "/productos/ropa028/05-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa035",
+    "name": "Sweater azulado",
+    "category": "Ropa",
+    "price": 35000,
+    "condition": "Usado",
+    "description": "Sweater azulado Quiksilver.",
+    "details": [
+      "Marca: Quiksilver 1969.",
+      "Talla: S."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa035/01-card.webp",
+    "images": [
+      "/productos/ropa035/01-detail.webp",
+      "/productos/ropa035/02-detail.webp",
+      "/productos/ropa035/03-detail.webp",
+      "/productos/ropa035/04-detail.webp",
+      "/productos/ropa035/05-detail.webp",
+      "/productos/ropa035/06-detail.webp",
+      "/productos/ropa035/07-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa029",
+    "name": "Sweater beige",
+    "category": "Ropa",
+    "price": 50000,
+    "condition": "Usado",
+    "description": "Sweater beige UNIQLO. Chaqueta polar con cremallera completa",
+    "details": [
+      "Marca: UNIQLO.",
+      "Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa029/01-card.webp",
+    "images": [
+      "/productos/ropa029/01-detail.webp",
+      "/productos/ropa029/02-detail.webp",
+      "/productos/ropa029/03-detail.webp",
+      "/productos/ropa029/04-detail.webp",
+      "/productos/ropa029/05-detail.webp",
+      "/productos/ropa029/06-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa031",
+    "name": "Campera gris",
+    "category": "Ropa",
+    "price": 50000,
+    "condition": "Usado",
+    "description": "Campera gris de denim jean para mujer 47 Street.",
+    "details": [
+      "Marca: 47 Street.",
+      "Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa031/01-card.webp",
+    "images": [
+      "/productos/ropa031/01-detail.webp",
+      "/productos/ropa031/02-detail.webp",
+      "/productos/ropa031/03-detail.webp",
+      "/productos/ropa031/04-detail.webp",
+      "/productos/ropa031/05-detail.webp",
+      "/productos/ropa031/06-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa032",
+    "name": "Vestido negro",
+    "category": "Ropa",
+    "price": 35000,
+    "condition": "Usado",
+    "description": "Vestido negro de ojuelas para mujer con detalles de transparencia.",
+    "details": [
+      "Marca: Just Me.",
+      "Talla: S."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa032/01-card.webp",
+    "images": [
+      "/productos/ropa032/01-detail.webp",
+      "/productos/ropa032/02-detail.webp",
+      "/productos/ropa032/03-detail.webp",
+      "/productos/ropa032/04-detail.webp",
+      "/productos/ropa032/05-detail.webp",
+      "/productos/ropa032/06-detail.webp",
+      "/productos/ropa032/07-detail.webp",
+      "/productos/ropa032/08-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa033",
+    "name": "Blazer gris",
+    "category": "Ropa",
+    "price": 30000,
+    "condition": "Usado",
+    "description": "Blazer gris de vestir para mujer.",
+    "details": [
+      "Marca: ESPRIT Collection. Talla: 40."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa033/01-card.webp",
+    "images": [
+      "/productos/ropa033/01-detail.webp",
+      "/productos/ropa033/02-detail.webp",
+      "/productos/ropa033/03-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa036",
+    "name": "Pantalón gris oscuro",
+    "category": "Ropa",
+    "price": 20000,
+    "condition": "Usado",
+    "description": "Pantalón de vestir mujer gris oscuro.",
+    "details": [
+      "Talla: S."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa036/01-card.webp",
+    "images": [
+      "/productos/ropa036/01-detail.webp",
+      "/productos/ropa036/02-detail.webp",
+      "/productos/ropa036/03-detail.webp",
+      "/productos/ropa036/04-detail.webp",
+      "/productos/ropa036/05-detail.webp",
+      "/productos/ropa036/06-detail.webp",
+      "/productos/ropa036/07-detail.webp",
+      "/productos/ropa036/08-detail.webp",
+      "/productos/ropa036/09-detail.webp",
+      "/productos/ropa036/10-detail.webp",
+      "/productos/ropa036/11-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa034",
+    "name": "Pantalon de vestir",
+    "category": "Ropa",
+    "price": 8000,
+    "condition": "Usado",
+    "description": "Pantalon de vestir Polo verde.",
+    "details": [
+      "Marca: Simonaci Polo Life.",
+      "Talla: 40."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa034/01-card.webp",
+    "images": [
+      "/productos/ropa034/01-detail.webp",
+      "/productos/ropa034/02-detail.webp",
+      "/productos/ropa034/03-detail.webp"
+    ]
+  },
+  {
+    "id": "ropa027",
+    "name": "Pantalón gris",
+    "category": "Ropa",
+    "price": 8000,
+    "condition": "Usado",
+    "description": "Pantalón holgado negro.",
+    "details": [
+      "Marca: ModernBoy.",
+      "Talla: M."
+    ],
+    "available": true,
+    "cardImage": "/productos/ropa027/01-card.webp",
+    "images": [
+      "/productos/ropa027/01-detail.webp",
+      "/productos/ropa027/02-detail.webp",
+      "/productos/ropa027/03-detail.webp",
+      "/productos/ropa027/04-detail.webp",
+      "/productos/ropa027/05-detail.webp",
+      "/productos/ropa027/06-detail.webp"
     ]
   },
   {
