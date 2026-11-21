@@ -2,13 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Product } from './data/products'
 import { products } from './data/products'
 
-const WHATSAPP_NUMBER = '+447352590726'
-const WHATSAPP_USERNAME = 'victor706'
+const REDDIT_URL = 'https://www.reddit.com/user/alejandrim/'
+const REDDIT_USERNAME = 'u/alejandrim'
 const money = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 })
 
 type Cart = Record<string, number>
 
-function Icon({ name }: { name: 'search' | 'arrow' | 'plus' | 'minus' | 'close' | 'bag' | 'whatsapp' | 'chevron-left' | 'chevron-right' }) {
+function Icon({ name }: { name: 'search' | 'arrow' | 'plus' | 'minus' | 'close' | 'bag' | 'reddit' | 'chevron-left' | 'chevron-right' }) {
   const paths = {
     search: <><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></>,
     arrow: <><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></>,
@@ -16,7 +16,7 @@ function Icon({ name }: { name: 'search' | 'arrow' | 'plus' | 'minus' | 'close' 
     minus: <path d="M5 12h14" />,
     close: <><path d="m6 6 12 12" /><path d="m18 6-12 12" /></>,
     bag: <><path d="M6 8h12l1 12H5L6 8Z" /><path d="M9 8a3 3 0 0 1 6 0" /></>,
-    whatsapp: <><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" /><path d="M8.5 8.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.3 0 .5-.2.7l-.5.5c.4.8 1 1.4 1.8 1.8l.5-.5c.2-.2.4-.3.7-.2l1.5.6c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.5.2-1.3.2-2.4-.3-2-.9-3.3-2.1-4.2-3.8-.5-1.1-.5-1.9-.3-2.4Z" /></>,
+    reddit: <><circle cx="12" cy="13" r="7" /><circle cx="9.5" cy="13" r=".8" /><circle cx="14.5" cy="13" r=".8" /><path d="M9.5 16c1.4 1 3.6 1 5 0" /><path d="m15 6 1-3 3 1" /></>,
     'chevron-left': <path d="m15 18-6-6 6-6" />,
     'chevron-right': <path d="m9 18 6-6-6-6" />,
   }
@@ -24,8 +24,10 @@ function Icon({ name }: { name: 'search' | 'arrow' | 'plus' | 'minus' | 'close' 
   return <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">{paths[name]}</svg>
 }
 
-function buildWhatsAppUrl(message: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+function copyContactMessage(message: string) {
+  if (typeof navigator !== 'undefined' && navigator.clipboard) {
+    void navigator.clipboard.writeText(message).catch(() => undefined)
+  }
 }
 
 function pickHeroProducts() {
@@ -62,7 +64,7 @@ function ProductDetail({ product, onClose, onAdd }: { product: Product; onClose:
   const [activeImage, setActiveImage] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [zoom, setZoom] = useState(1)
-  const inquiryUrl = buildWhatsAppUrl(`Hola, Victor. Me interesa consultar por “${product.name}” (${money.format(product.price)}). ¿Sigue disponible?`)
+  const inquiryMessage = `Hola. Me interesa consultar por “${product.name}” (${money.format(product.price)}). ¿Sigue disponible?`
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -111,7 +113,7 @@ function ProductDetail({ product, onClose, onAdd }: { product: Product; onClose:
           <ul className="detail-list">{product.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
           <div className="detail-actions">
             <button className="primary-button" onClick={onAdd} disabled={!product.available}>{product.available ? <>Agregar al carrito <Icon name="plus" /></> : 'Producto vendido'}</button>
-            <a className="whatsapp-button outline" href={inquiryUrl} target="_blank" rel="noreferrer"><Icon name="whatsapp" /> Consultar por WhatsApp</a>
+            <a className="contact-button outline" href={REDDIT_URL} onClick={() => copyContactMessage(inquiryMessage)} target="_blank" rel="noreferrer"><Icon name="reddit" /> Consultar por Reddit</a>
           </div>
         </div>
       </section>
@@ -143,8 +145,8 @@ function CartDrawer({ cart, onChange, onClose }: { cart: Cart; onChange: (id: st
         {items.length === 0 ? <div className="empty-cart"><span className="empty-icon"><Icon name="bag" /></span><h3>Tu carrito está vacío</h3><p>Sumá algo que te guste y armamos la consulta.</p></div> : <>
           <div className="cart-items">{items.map(({ product, quantity }) => <div className="cart-item" key={product.id}><img src={product.cardImage} alt="" /><div className="cart-item-info"><strong>{product.name}</strong><span>{money.format(product.price)}</span><div className="quantity"><button onClick={() => onChange(product.id, quantity - 1)} aria-label="Quitar uno"><Icon name="minus" /></button><span>{quantity}</span><button onClick={() => onChange(product.id, quantity + 1)} aria-label="Agregar uno"><Icon name="plus" /></button></div></div></div>)}</div>
           <div className="cart-summary"><span>Total estimado</span><strong>{money.format(total)}</strong></div>
-          <a className="whatsapp-button" href={buildWhatsAppUrl(message)} target="_blank" rel="noreferrer"><Icon name="whatsapp" /> Enviar consulta</a>
-          <p className="cart-note">No es una compra ni una reserva. Coordinamos todo por WhatsApp.</p>
+          <a className="contact-button" href={REDDIT_URL} onClick={() => copyContactMessage(message)} target="_blank" rel="noreferrer"><Icon name="reddit" /> Abrir Reddit y copiar resumen en portapapeles</a>
+          <p className="cart-note">El resumen se copia para pegarlo en el chat de Reddit. No es una compra ni una reserva.</p>
         </>}
       </aside>
     </div>
@@ -174,12 +176,12 @@ function App() {
     <div className="site-shell">
       <header className="topbar"><a className="brand" href="#inicio"><span className="brand-mark">GS</span><span><strong>Garage Sale</strong><small>CABA · cosas con otra historia</small></span></a><nav><a href="#catalogo">Catálogo</a><a href="#como-funciona">Cómo funciona</a></nav><button className="cart-button" onClick={() => setCartOpen(true)}><Icon name="bag" /><span>Carrito</span>{cartCount > 0 && <b>{cartCount}</b>}</button></header>
       <main id="inicio">
-        <section className="hero"><div className="hero-copy"><p className="kicker">OBJETOS ELEGIDOS · CABA</p><h1>Cosas con otra historia, <em>listas para la próxima.</em></h1><p className="hero-lede">Una selección de muebles, deco y objetos usados que todavía tienen mucho para dar. Mirá, elegí y escribime por WhatsApp.</p><a className="primary-button" href="#catalogo">Ver productos <Icon name="arrow" /></a></div><div className="hero-art">{heroProducts.map((product, index) => <button className={`hero-product-photo hero-product-photo-${index}`} key={product.id} onClick={() => setSelectedProduct(product)} aria-label={`Ver ${product.name}`}><img src={product.cardImage} alt={product.name} /><span>{product.name}</span></button>)}<div className="tape">segunda<br />oportunidad</div><div className="art-card art-card-back">✦</div><div className="art-card art-card-front"><span>encontrado<br />para vos</span><strong>↗</strong></div><div className="hero-stamp">reusar<br />es elegir<br />distinto</div></div></section>
-        <section className="trust-strip"><div><strong>Retiro en CABA</strong><span>Coordinamos por WhatsApp</span></div><div><strong>Envíos a consultar</strong><span>Vemos la mejor opción para vos</span></div><div><strong>Sin vueltas</strong><span>Preguntá por cualquier detalle</span></div></section>
+        <section className="hero"><div className="hero-copy"><p className="kicker">OBJETOS ELEGIDOS · CABA</p><h1>Cosas con otra historia, <em>listas para la próxima.</em></h1><p className="hero-lede">Una selección de muebles, deco y objetos usados que todavía tienen mucho para dar. Mirá, elegí y escribime por Reddit.</p><a className="primary-button" href="#catalogo">Ver productos <Icon name="arrow" /></a></div><div className="hero-art">{heroProducts.map((product, index) => <button className={`hero-product-photo hero-product-photo-${index}`} key={product.id} onClick={() => setSelectedProduct(product)} aria-label={`Ver ${product.name}`}><img src={product.cardImage} alt={product.name} /><span>{product.name}</span></button>)}<div className="tape">segunda<br />oportunidad</div><div className="art-card art-card-back">✦</div><div className="art-card art-card-front"><span>encontrado<br />para vos</span><strong>↗</strong></div><div className="hero-stamp">reusar<br />es elegir<br />distinto</div></div></section>
+        <section className="trust-strip"><div><strong>Retiro en CABA</strong><span>Coordinamos por Reddit</span></div><div><strong>Envíos a consultar</strong><span>Vemos la mejor opción para vos</span></div><div><strong>Sin vueltas</strong><span>Preguntá por cualquier detalle</span></div></section>
         <section className="catalog-section" id="catalogo"><div className="section-heading"><div><p className="kicker">LA SELECCIÓN ACTUAL</p><h2>Encontrá tu próximo hallazgo.</h2></div><span className="product-count">{visibleProducts.length} productos</span></div><div className="catalog-toolbar"><div className="search-box"><Icon name="search" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar por nombre o categoría" aria-label="Buscar productos" /></div><div className="category-list">{categories.map((item) => <button className={category === item ? 'category-chip active' : 'category-chip'} onClick={() => setCategory(item)} key={item}>{item}</button>)}</div></div>{visibleProducts.length > 0 ? <div className="product-grid">{visibleProducts.map((product) => <ProductCard key={product.id} product={product} onOpen={() => setSelectedProduct(product)} onAdd={() => addToCart(product.id)} />)}</div> : <div className="no-results"><h3>No encontramos ese hallazgo.</h3><p>Probá con otro nombre o categoría.</p></div>}</section>
-        <section className="how-section" id="como-funciona"><div><p className="kicker">ASÍ DE SIMPLE</p><h2>Elegís. Consultás. Coordinamos.</h2></div><div className="steps"><div><span>01</span><strong>Mirás con calma</strong><p>Abrí cualquier producto para ver más fotos y detalles.</p></div><div><span>02</span><strong>Armás tu selección</strong><p>Sumá al carrito todo lo que te interese.</p></div><div><span>03</span><strong>Me escribís</strong><p>El botón abre WhatsApp con tu consulta lista.</p></div></div></section>
+        <section className="how-section" id="como-funciona"><div><p className="kicker">ASÍ DE SIMPLE</p><h2>Elegís. Consultás. Coordinamos.</h2></div><div className="steps"><div><span>01</span><strong>Mirás con calma</strong><p>Abrí cualquier producto para ver más fotos y detalles.</p></div><div><span>02</span><strong>Armás tu selección</strong><p>Sumá al carrito todo lo que te interese.</p></div><div><span>03</span><strong>Me escribís</strong><p>El botón abre Reddit con tu resumen listo para pegar.</p></div></div></section>
       </main>
-      <footer><div className="brand footer-brand"><span className="brand-mark">GS</span><span><strong>Garage Sale</strong><small>CABA · cosas con otra historia</small></span></div><p>Hecho para encontrarle una nueva casa a cosas que todavía tienen mucho para dar.</p><a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer"><Icon name="whatsapp" /> {WHATSAPP_USERNAME}</a></footer>
+      <footer><div className="brand footer-brand"><span className="brand-mark">GS</span><span><strong>Garage Sale</strong><small>CABA · cosas con otra historia</small></span></div><p>Hecho para encontrarle una nueva casa a cosas que todavía tienen mucho para dar.</p><a href={REDDIT_URL} target="_blank" rel="noreferrer"><Icon name="reddit" /> {REDDIT_USERNAME}</a></footer>
       {selectedProduct && <ProductDetail product={selectedProduct} onClose={() => setSelectedProduct(null)} onAdd={() => addToCart(selectedProduct.id)} />}
       {cartOpen && <CartDrawer cart={cart} onChange={changeQuantity} onClose={() => setCartOpen(false)} />}
     </div>

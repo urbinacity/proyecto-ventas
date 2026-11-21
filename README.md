@@ -1,6 +1,6 @@
 # Garage Sale CABA
 
-Catálogo frontend estático para vender productos usados y recibir consultas por WhatsApp.
+Catálogo frontend estático para vender productos usados y recibir consultas por Reddit.
 
 ## Desarrollo
 
