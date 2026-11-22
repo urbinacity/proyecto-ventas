@@ -456,7 +456,7 @@ export const products: Product[] = [
     "id": "ropa025",
     "name": "Sweater azul oscuro",
     "category": "Ropa",
-    "price": 50000,
+    "price": 65000,
     "condition": "Usado",
     "description": "Sweater UNIQLO azul oscuro de cuello alto.",
     "details": [
