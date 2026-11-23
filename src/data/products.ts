@@ -18,7 +18,7 @@ export const products: Product[] = [
     "id": "electronica023",
     "name": "CPU gamer Intel",
     "category": "Electrónica",
-    "price": 730000,
+    "price": 650000,
     "condition": "Usado",
     "description": "Computadora de escritorio gamer 2 años de uso.",
     "details": [
