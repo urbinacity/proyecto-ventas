@@ -18,19 +18,17 @@ export const products: Product[] = [
     "id": "electronica023",
     "name": "CPU gamer Intel",
     "category": "Electrónica",
-    "price": 650000,
+    "price": 550000,
     "condition": "Usado",
     "description": "Computadora de escritorio gamer 2 años de uso.",
     "details": [
       "Memoria RAM: 16 GB DDR4 3000 MHz (Corsair Vengeance)",
-      "Almacenamiento: 1TB SSD HP.",
       "Almacenamiento: 500 GB HDD Toshiba",
       "GPU: AMD Radeon RX 570 8 GB",
       "Procesador: Intel Core i7-8700 (6 núcleos, 3.2 GHz, 8va generación)",
       "Placa madre: Gigabyte Z370 HD3 (socket 1151)",
       "Fuente de poder: Sentey 750W 80+ Bronze (modular, MBP750-MH)",
       "Gabinete: Sentey GS-6350.",
-      "Sistema preinstalado: Bazzite 25 ideal para Fornite."
     ],
     "available": true,
     "cardImage": "/productos/electronica023/01-card.webp",
@@ -38,7 +36,6 @@ export const products: Product[] = [
       "/productos/electronica023/01-detail.webp",
       "/productos/electronica023/02-detail.webp",
       "/productos/electronica023/03-detail.webp",
-      "/productos/electronica023/04-detail.webp",
       "/productos/electronica023/06-detail.webp",
       "/productos/electronica023/07-detail.webp",
       "/productos/electronica023/09-detail.webp",
@@ -47,54 +44,9 @@ export const products: Product[] = [
       "/productos/electronica023/12-detail.webp",
       "/productos/electronica023/13-detail.webp",
       "/productos/electronica023/14-detail.webp",
-      "/productos/electronica023/15-detail.webp",
       "/productos/electronica023/16-detail.webp",
-      "/productos/electronica023/17-detail.webp",
-      "/productos/electronica023/18-detail.webp",
-      "/productos/electronica023/19-detail.webp",
       "/productos/electronica023/20-detail.webp",
       "/productos/electronica023/21-detail.webp"
-    ]
-  },
-  {
-    "id": "electronica041",
-    "name": "Disco externo Seagate Expansion 4TB",
-    "category": "Electrónica",
-    "price": 140000,
-    "condition": "Usado",
-    "description": "Disco rígido externo Seagate Expansion de 4 TB.",
-    "details": [
-      "USB 3.0. Capacidad: 4 TB (4000 GB reales para almacenamiento masivo). Estado de Salud: BUENO (100% operativo, sin sectores dañados ni errores de lectura)."
-    ],
-    "available": true,
-    "cardImage": "/productos/electronica041/01-card.webp",
-    "images": [
-      "/productos/electronica041/01-detail.webp",
-      "/productos/electronica041/02-detail.webp",
-      "/productos/electronica041/03-detail.webp",
-      "/productos/electronica041/04-detail.webp",
-      "/productos/electronica041/05-detail.webp",
-      "/productos/electronica041/06-detail.webp",
-      "/productos/electronica041/07-detail.webp"
-    ]
-  },
-  {
-    "id": "electronica042",
-    "name": "Webcam Redragon Hitman GW800",
-    "category": "Electrónica",
-    "price": 40000,
-    "condition": "Usado",
-    "description": "Webcam Redragon Hitman GW800 con resolución Full HD 1080p.",
-    "details": [
-      "Se uso apenas 1 o 2 veces."
-    ],
-    "available": true,
-    "cardImage": "/productos/electronica042/01-card.webp",
-    "images": [
-      "/productos/electronica042/01-detail.webp",
-      "/productos/electronica042/02-detail.webp",
-      "/productos/electronica042/03-detail.webp",
-      "/productos/electronica042/04-detail.webp"
     ]
   },
   {
@@ -166,25 +118,6 @@ export const products: Product[] = [
       "/productos/electronica053-displayport/01-detail.webp",
       "/productos/electronica053-displayport/02-detail.webp",
       "/productos/electronica053-displayport/03-detail.webp"
-    ]
-  },
-  {
-    "id": "hogar038",
-    "name": "Set de bowls blancos",
-    "category": "Hogar",
-    "price": 40000,
-    "condition": "Usado",
-    "description": "Set vajilla blanca, con ensaladera.",
-    "details": [],
-    "available": true,
-    "cardImage": "/productos/hogar038/01-card.webp",
-    "images": [
-      "/productos/hogar038/01-detail.webp",
-      "/productos/hogar038/02-detail.webp",
-      "/productos/hogar038/03-detail.webp",
-      "/productos/hogar038/04-detail.webp",
-      "/productos/hogar038/05-detail.webp",
-      "/productos/hogar038/06-detail.webp"
     ]
   },
   {
@@ -280,7 +213,7 @@ export const products: Product[] = [
     "description": "Camisa azul a cuadros Furest.",
     "details": [
       "Marca: Furest.",
-      "Talla: 35/38."
+      "Talla: S/35/38."
     ],
     "available": true,
     "cardImage": "/productos/ropa010/01-card.webp",
